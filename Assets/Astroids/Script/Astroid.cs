@@ -13,6 +13,8 @@ public class Astroid : MonoBehaviour
 
     private void OnDestroy()
     {
+        var gameManager = FindObjectOfType<SpaceGameManager>();
+        gameManager?.addPoints(10);  // the ? checks if the var is null then do it else don't
         Instantiate(explosion, transform.position, transform.rotation);
     }
 
