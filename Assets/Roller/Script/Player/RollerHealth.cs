@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class RollerHealth : MonoBehaviour
 {
-    [SerializeField] float maxHealth = 100;
-    public float health { get; set; }
+    [SerializeField] public float maxHealth = 100;
+	[SerializeField] public float health = 0;
     public bool isDead = false;
 	
 	public Action onDamage;
